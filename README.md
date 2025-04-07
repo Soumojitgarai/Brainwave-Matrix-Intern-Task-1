@@ -1,4 +1,5 @@
-# 🌍 CultureQuest
+# Web Development Intern
+## 🌍 Task 1: Develop a landing page of any website you like make it as functional as you can.
 
 ![screenshot](https://github.com/user-attachments/assets/23715e31-3bf5-4a3c-8095-6e49ab899916)
 
@@ -81,17 +82,3 @@ npm run build
 ```
 
 2. Deploy the contents of the `dist` folder to your hosting provider
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
----
-
-<div align="center">
-  <p>Created with ❤️ for families who love learning together</p>
-</div>
