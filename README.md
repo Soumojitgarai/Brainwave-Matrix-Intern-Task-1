@@ -1,9 +1,7 @@
 # 🌍 CultureQuest
 
-<div align="center">
-  <img src="https://picsum.photos/seed/culturequest/800/400" alt="CultureQuest Banner" width="800px" />
-  <p><em>Explore the world through play - A family-friendly cultural education platform</em></p>
-</div>
+![screenshot](https://github.com/user-attachments/assets/23715e31-3bf5-4a3c-8095-6e49ab899916)
+
 
 ## 📋 Overview
 
