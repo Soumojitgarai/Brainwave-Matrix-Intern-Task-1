@@ -5,7 +5,7 @@ export const games: Game[] = [
     id: 1,
     title: "Tasty Traditions",
     description: "Explore the delicious world of international cuisine! Match foods to countries and learn about special dishes.",
-    imageUrl: "https://images.unsplash.com/photo-1544036741-f3654143724f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://picsum.photos/seed/food123/800/600",
     ageRange: "Ages 4-8",
     tag: {
       text: "Popular",
@@ -16,14 +16,14 @@ export const games: Game[] = [
     id: 2,
     title: "Amazing Monuments",
     description: "Build and learn about famous landmarks from every continent. Discover the stories behind these amazing structures!",
-    imageUrl: "https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://picsum.photos/seed/monuments456/800/600",
     ageRange: "Ages 6-10"
   },
   {
     id: 3,
     title: "Festival Fun",
     description: "Join celebrations around the world! Learn about special holidays and festivals from different cultures.",
-    imageUrl: "https://images.unsplash.com/photo-1535572290543-960a8046f5af?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://picsum.photos/seed/festival789/800/600",
     ageRange: "Ages 5-9",
     tag: {
       text: "New",
@@ -34,21 +34,21 @@ export const games: Game[] = [
     id: 4,
     title: "Global Games",
     description: "Play sports and games from different countries! Learn the rules and history of activities kids enjoy worldwide.",
-    imageUrl: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://picsum.photos/seed/games101/800/600",
     ageRange: "Ages 7-12"
   },
   {
     id: 5,
     title: "Musical Journey",
     description: "Listen, play, and create music from around the world! Discover instruments and songs from different cultures.",
-    imageUrl: "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://picsum.photos/seed/music202/800/600",
     ageRange: "Ages 3-8"
   },
   {
     id: 6,
     title: "Dress Up World",
     description: "Explore traditional clothing from different countries! Learn about special outfits and costumes from around the globe.",
-    imageUrl: "https://images.unsplash.com/photo-1607453998774-d533f65dac99?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://picsum.photos/seed/clothing303/800/600",
     ageRange: "Ages 4-9"
   }
 ];
@@ -97,7 +97,7 @@ export const testimonials: Testimonial[] = [
     id: 1,
     name: "Sarah Johnson",
     role: "Mother of two",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+    image: "https://picsum.photos/seed/sarah123/150/150",
     quote: "My kids look forward to our CultureQuest sessions every weekend. They're learning so much about different countries and traditions while having fun. The sound design is perfect - engaging but not overstimulating.",
     rating: 5
   },
@@ -105,7 +105,7 @@ export const testimonials: Testimonial[] = [
     id: 2,
     name: "David Chen",
     role: "Elementary teacher",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+    image: "https://picsum.photos/seed/david456/150/150",
     quote: "As a teacher, I'm impressed by the educational depth of CultureQuest. The games are well-researched and present cultural information in a respectful and engaging way. I recommend it to all my students' parents.",
     rating: 5
   },
@@ -113,7 +113,7 @@ export const testimonials: Testimonial[] = [
     id: 3,
     name: "Maria Rodriguez",
     role: "Parent & educator",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+    image: "https://picsum.photos/seed/maria789/150/150",
     quote: "This app has been wonderful for my multilingual family. It helps my children connect with their heritage and learn about other cultures too. The audio pronunciations of words in different languages are especially helpful.",
     rating: 4.5
   }

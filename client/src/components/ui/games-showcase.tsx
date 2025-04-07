@@ -3,20 +3,17 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Volume2, Info, ChevronRight } from 'lucide-react';
+import { games } from '@/lib/data';
+import { Game } from '@/lib/types';
 
 interface GameCardProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  ageRange: string;
-  tag?: {
-    text: string;
-    type: 'popular' | 'new';
-  };
+  game: Game;
   delay: number;
 }
 
-const GameCard = ({ title, description, imageUrl, ageRange, tag, delay }: GameCardProps) => {
+const GameCard = ({ game, delay }: GameCardProps) => {
+  const { title, description, imageUrl, ageRange, tag } = game;
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -26,9 +23,17 @@ const GameCard = ({ title, description, imageUrl, ageRange, tag, delay }: GameCa
       whileHover={{ y: -8 }}
       className="game-card"
     >
-      <Card className="bg-white overflow-hidden shadow-md hover:shadow-xl transition-all">
+      <Card className="bg-white overflow-hidden shadow-md hover:shadow-xl transition-all h-full">
         <div className="relative h-48 overflow-hidden">
-          <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
+          <img 
+            src={imageUrl} 
+            alt={title} 
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = `https://placehold.co/800x600/9CA3AF/FFFFFF?text=${encodeURIComponent(title)}`;
+            }}
+          />
           {tag && (
             <div className={`absolute top-3 left-3 text-white text-xs font-bold uppercase py-1 px-2 rounded-full ${
               tag.type === 'popular' ? 'bg-amber-500' : 'bg-pink-500'
@@ -61,53 +66,6 @@ const GameCard = ({ title, description, imageUrl, ageRange, tag, delay }: GameCa
 };
 
 const GamesShowcase = () => {
-  const games = [
-    {
-      title: "Tasty Traditions",
-      description: "Explore the delicious world of international cuisine! Match foods to countries and learn about special dishes.",
-      imageUrl: "https://images.unsplash.com/photo-1544036741-f3654143724f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      ageRange: "Ages 4-8",
-      tag: {
-        text: "Popular",
-        type: "popular" as const
-      }
-    },
-    {
-      title: "Amazing Monuments",
-      description: "Build and learn about famous landmarks from every continent. Discover the stories behind these amazing structures!",
-      imageUrl: "https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      ageRange: "Ages 6-10"
-    },
-    {
-      title: "Festival Fun",
-      description: "Join celebrations around the world! Learn about special holidays and festivals from different cultures.",
-      imageUrl: "https://images.unsplash.com/photo-1535572290543-960a8046f5af?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      ageRange: "Ages 5-9",
-      tag: {
-        text: "New",
-        type: "new" as const
-      }
-    },
-    {
-      title: "Global Games",
-      description: "Play sports and games from different countries! Learn the rules and history of activities kids enjoy worldwide.",
-      imageUrl: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      ageRange: "Ages 7-12"
-    },
-    {
-      title: "Musical Journey",
-      description: "Listen, play, and create music from around the world! Discover instruments and songs from different cultures.",
-      imageUrl: "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      ageRange: "Ages 3-8"
-    },
-    {
-      title: "Dress Up World",
-      description: "Explore traditional clothing from different countries! Learn about special outfits and costumes from around the globe.",
-      imageUrl: "https://images.unsplash.com/photo-1607453998774-d533f65dac99?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      ageRange: "Ages 4-9"
-    }
-  ];
-
   return (
     <section id="games" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
@@ -126,12 +84,8 @@ const GamesShowcase = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {games.map((game, index) => (
             <GameCard
-              key={index}
-              title={game.title}
-              description={game.description}
-              imageUrl={game.imageUrl}
-              ageRange={game.ageRange}
-              tag={game.tag}
+              key={game.id}
+              game={game}
               delay={0.1 * index}
             />
           ))}
